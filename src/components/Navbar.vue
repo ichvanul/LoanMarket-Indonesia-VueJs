@@ -2,26 +2,32 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container">
-        <img src="../assets/logo.png" alt="">
+        <router-link to="/"><img src="../assets/logo.png" alt=""></router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto evn-title text-dark">
             <li class="nav-item">
-              <a class="nav-link" href="#">Beranda</a>
+              <router-link to="/adviser" tag="li"><a class="nav-link">Cari Loan Adviser</a></router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Produk</a>
+              <router-link to="/branch" tag="li"><a class="nav-link">Branch</a></router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Loan Adviser</a>
+              <a class="nav-link">Produk</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Informasi & Bantuan</a>
+              <a class="nav-link">Kalkulator Simulasi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tentang Kami</a>
+              <a class="nav-link">Bantuan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Kenapa Loan Market?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Kontak Kami</a>
             </li>
           </ul>
         </div>
@@ -50,6 +56,8 @@ export default {
   text-transform: uppercase;
   color: #00a8ea;
   margin-right: 30px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .nav-link:hover::after {
