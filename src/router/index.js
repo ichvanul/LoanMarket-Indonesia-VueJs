@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Branch from '../views/Branch.vue'
 import LoanAdviser from '../views/LoanAdviser.vue'
 import DetailBranch from '../views/DetailBranch.vue'
+import DetailAdviser from '../views/DetailAdviser.vue'
 
 Vue.use(VueRouter)
 
@@ -24,9 +25,16 @@ const routes = [
     component: LoanAdviser
   },
   {
-    path: '/branch/profile',
+    path: '/detailbranch/:id_branch',
     name: 'DetailBranch',
-    component: DetailBranch
+    component: DetailBranch,
+    props: true
+  },
+  {
+    path: '/detailadviser/:id_adviser',
+    name: 'DetailAdviser',
+    component: DetailAdviser,
+    props: true
   }
 ]
 

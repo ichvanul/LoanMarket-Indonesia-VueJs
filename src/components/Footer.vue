@@ -116,4 +116,56 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+.container-footer {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)), url('../assets/home.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 15px;
+  .header-footer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    .body-footer{
+      .title-footer{
+        padding: 0;
+        h5{
+          font-size: 14px;
+          font-weight: bolder;
+          color: white;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+          padding: 0 0 20px 0;
+        }
+      }
+      .content-footer{
+        p{
+          font-size: 11px;
+          font-weight: 400;
+          color: white;
+          margin: 0;
+          padding: 0 0 10px 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .footer-footer{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 0;
+    width: 100%;
+    .socmed-footer{
+      i{
+        padding: 0 16px;
+        font-size: 24px;
+        color: #00a8ea;
+        cursor: pointer;
+      }
+    }
+  }
+}
+}
 </style>

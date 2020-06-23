@@ -1,11 +1,11 @@
 <template>
 <div class="container">
-  <div class="d-flex justify-content-between row">
-    <div v-for="card in advisers" :key="card">
+  <div class="body-card d-flex justify-content-between row">
+    <div v-for="card in advisers" :key="card.result">
       <div class="card mt-4 mb-3" style="width: 16rem;">
         <img :src="card.image" style="height: 310px; object-fit: cover;" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text evn-title"> {{ card.name }} </p>
+          <p class="card-text evn-title"> <router-link :to="'/detailadviser/'+card.id_adviser"> {{ card.name }} </router-link></p>
         </div>
       </div>
     </div>
@@ -34,6 +34,7 @@ import axios from 'axios'
 
 export default {
   name: 'CardAdviser',
+  props: ['adviser'],
   data () {
     return {
       advisers: [],
@@ -109,4 +110,13 @@ export default {
   transition: linear 0.5s;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .body-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 </style>

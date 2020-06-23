@@ -42,4 +42,11 @@ export default {
   font-size: 20px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .display-4 {
+    font-size: 28px;
+  }
+}
 </style>

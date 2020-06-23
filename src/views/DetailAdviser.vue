@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar/>
-    <ContentBranch v-bind:dataBranch="idBranchs.result[0]"/>
+    <ContentAdviser v-bind:dataAdviser="idAdvisers.result[0]"/>
     <Footer/>
   </div>
 </template>
@@ -9,26 +9,26 @@
 <script>
 import axios from 'axios'
 import Navbar from '../components/Navbar.vue'
-import ContentBranch from '../components/ContentBranch.vue'
+import ContentAdviser from '../components/ContentAdviser.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
-  name: 'DetailBranch',
+  name: 'DetailAdviser',
   components: {
     Navbar,
-    ContentBranch,
+    ContentAdviser,
     Footer
   },
-  props: ['id_branch'],
+  props: ['id_adviser'],
   data () {
     return {
-      idBranchs: []
+      idAdvisers: []
     }
   },
   mounted () {
-    axios.get(`http://localhost:5000/api/v1/branch/${this.id_branch}`)
+    axios.get(`http://localhost:5000/api/v1/adviser/${this.id_adviser}`)
       .then((res) => {
-        this.idBranchs = res.data
+        this.idAdvisers = res.data
       })
   }
 }

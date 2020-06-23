@@ -1,11 +1,11 @@
 <template>
 <div class="container">
-  <div class="d-flex justify-content-between row">
-    <div v-for="card in branchs" :key="card.id">
+  <div class="body-card d-flex justify-content-between row">
+    <div v-for="card in branchs" :key="card.result">
       <div class="card mt-4 mb-3" style="width: 16rem; object-fit: cover;">
         <img src="../assets/logo.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text evn-title"> <router-link :to="'/branch/profile/'+card.id_branch">
+          <p class="card-text evn-title"> <router-link :to="'/detailbranch/'+card.id_branch">
           {{ card.name }} </router-link></p>
         </div>
       </div>
@@ -35,8 +35,11 @@ import axios from 'axios'
 
 export default {
   name: 'CardBranch',
+  props: ['branch'],
   data () {
     return {
+      inputSearch: '',
+      feed: null,
       branchs: [],
       container: '',
       currentPage: 1,
@@ -96,6 +99,27 @@ export default {
         this.totalPage = res.data.result[0]
       })
   }
+  // computed: {
+  //   // eslint-disable-next-line vue/no-dupe-keys
+  //   branchs: function () {
+  //     var photos = this.photoFeed
+  //     var inputSearch = this.inputSearch
+
+  //     if (!inputSearch) {
+  //       return photos
+  //     }
+
+  //     searchString = inputSearch.trim().toLowerCase()
+
+  //     photos = photos.filter(function (item) {
+  //       if (item.author.toLowerCase().indexOf(inputSearch) !== -1) {
+  //         return item
+  //       }
+  //     })
+
+  //     return photos
+  //   }
+  // }
 }
 </script>
 
@@ -110,4 +134,13 @@ export default {
   transition: linear 0.5s;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .body-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 </style>

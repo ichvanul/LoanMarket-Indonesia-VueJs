@@ -70,4 +70,21 @@ p {
   font-size: 16px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .display-4 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+}
 </style>

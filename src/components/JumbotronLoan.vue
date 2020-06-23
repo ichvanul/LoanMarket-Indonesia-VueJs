@@ -4,7 +4,7 @@
       <div class="container">
         <h1 class="display-4 evn-title">Kami memiliki Loan Adviser yang selalu siap membantu Anda</h1>
         <p class="lead evn-desc">Dengan lebih 100 Loan Adviser di seluruh Indonesia, kami selalu memiliki seseorang yang selalu siap membantu Anda. Loan Adviser kami akan menghubungi dan bertemu Anda kapan pun Anda mau.</p>
-        <a href="" class="btn btn-primary button evn-title">Temukan Loan Advisor</a>
+        <router-link to="/adviser" tag="li" class="btn btn-primary button evn-title">Temukan Loan Advisor</router-link>
       </div>
     </div>
   </div>
@@ -44,5 +44,23 @@ export default {
   border-radius: 40px;
   border: #00a8ea;
   background-color: #00a8ea;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .display-4 {
+    font-size: 22px;
+  }
+
+  .lead {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
 }
 </style>
